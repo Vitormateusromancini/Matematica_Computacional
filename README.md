@@ -17,6 +17,13 @@ ou
 
 $$ u_{i+1,j} +u_{i,j+1} - 4u_{i,j} + u_{i-1,j}+u_{i,j-1}=f(x_i,y_j)h^2$$
 
+
+Desejamos agora resolver numericamente um problema de condução de calor
+
+$$ \frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} = 0$$
+
+Para a solução numérica por diferenças finitas, usa-se uma grade de pontos onde as derivadas parciais da equação são substituidas por aproximações usando o esquema de diferenças finitas.
+
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -60,12 +67,6 @@ plt.gca().set_aspect('equal')
 plt.colorbar()
 plt.show()
 ```
-Desejamos agora resolver numericamente um problema de condução de calor
-
-$$ \frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} = 0$$
-
-Para a solução numérica por diferenças finitas, usa-se uma grade de pontos onde as derivadas parciais da equação são substituidas por aproximações usando o esquema de diferenças finitas.
-
 # Projeto de Matematica Computacional
 
 Neste projeto da disciplina vamos resolver numericamente equações diferenciais parciais (EDPs) envolve a discretização do domínio espacial e a implementação de métodos numéricos para aproximar as soluções. 
