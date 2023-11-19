@@ -69,6 +69,15 @@ plt.show()
 ```
 # Projeto de Matematica Computacional
 
+Projeto composto pelos discentes:
+
+- Álvaro Augusto Lago Silva 
+- Vitor Mateus Romancini do Amaral
+
+Aulas ministradas e auxiliadas pelo docente:
+
+- Prof: Tiago Martinuzzi Buriol
+
 Neste projeto da disciplina vamos resolver numericamente equações diferenciais parciais (EDPs) envolve a discretização do domínio espacial e a implementação de métodos numéricos para aproximar as soluções. 
 O trabalho escolhido foi as Deflexões em uma placa que dada o enunciado da questão pedia:  Desenvolva um programa computacional para determinar a deflexão de uma placa quadrada sujeita a uma carga de superfície constante. Teste seu programa para uma placa com bordas de 2 m de comprimento, q = 33,6 kN/m², σ = 0.3, Δz =  10−2  m e E =  2×1011  Pa. Use Δx = Δy = 0,5 m para seu teste de execução.
 
