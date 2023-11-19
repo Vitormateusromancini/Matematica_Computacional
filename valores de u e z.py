@@ -58,8 +58,8 @@ def deflection_plate_solver_z(u, delta_x):
 
         for i in range(1, nx-1):
             for j in range(1, ny-1):
-                z[i, j] = 0.063 * (z[i - 1, j] + z[i + 1, j]) + 0.086 * (z[i, j - 1] + z[i, j + 1]) - 0.25 * delta_x**2 * u[i, j]
-
+                z[i, j] = 0.25 * (z[i - 1, j] + z[i + 1, j]) + 0.25 * (z[i, j - 1] + z[i, j + 1]) - 0.25 * delta_x**2 * u[i, j]
+                # z[i, j] = 0.25*((z[i - 1, j] + z[i + 1, j]) + (z[i, j - 1] + z[i, j + 1]) - 4*delta_x**2 * u[i, j])
         # Impor condição de contorno z = 0 nas bordas
         z[:, 0] = 0
         z[:, -1] = 0
