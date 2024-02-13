@@ -1,3 +1,35 @@
+# Construção de Funções 
+
+O primeiro conteúdo discutido em Matemática Computacional é sobre construção de funções que são ensinadas na matemática básica, mas agora abordado em métodos númericos. Como no exemplo abaixo para a função de terceiro grau. 
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-2, 2, 400)
+
+y = x**3 - 2*x
+
+plt.figure(figsize=(8, 6))
+plt.plot(x, y, label='$y = x^3 - 2x$', color='blue')
+plt.title('Gráfico da função $y = x^3 - 2x$')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+plt.legend()
+plt.show()
+
+```
+No exemplo vemos a mportância de inserir as bibliotecas numpy para os cálculos matemáticos e o matplotlib.pyplot que inseri a plotagem e manipulação de gráficos. 
+Definir os dados se utiliza np.linspace() que tem como finalidade na definição do intervalo de valores de x, além de que os valores de y são definidos pela função logo abaixo demostrado pelo código. 
+
+Plotar os gráficos usa-se plt.plot() que traça o gráfico da função, especificando o estilo da linha, cor e a legenda. Os outros plot tem como finalidade enriquecer mais com detalhes o gráfico. E para exibir o gráfico se usa o plt.show() como demonstrado na imagem abaixo. 
+
+
+![Figure python](https://github.com/Vitormateusromancini/Matematica_Computacional/assets/77472862/f612efd4-9df0-4abd-9ba0-fefa9397b5f1)
+
+
+
 # O método de diferenças finitas: EDPs elípticas
 O método de diferenças finitas é uma abordagem numérica que aproxima as derivadas de uma equação diferencial parcial através de diferenças entre os valores discretos das variáveis ao longo de uma malha espacial, transformando a equação contínua em um sistema de equações algébricas solucionáveis.
 
