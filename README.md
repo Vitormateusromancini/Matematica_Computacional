@@ -28,7 +28,32 @@ Plotar os gráficos usa-se plt.plot() que traça o gráfico da função, especif
 
 ![Figure python](https://github.com/Vitormateusromancini/Matematica_Computacional/assets/77472862/f612efd4-9df0-4abd-9ba0-fefa9397b5f1)
 
+#Interpolação Polinomial 
 
+Uma função interpolada é aquela que passa em todos os n pontos dustintos de um intervalo [a,b], portanto uma função f(x) tal que ela seja igual a: 
+
+                                    f(xi) = yi 
+
+Com i = 0,1,2....n. 
+
+Existem algumas formas de resolver uma interpolação e uma delas é usar a fórmula interpolatória de Lagrange 
+                                    
+Seja $f(x)$ definida em $x_0, x_1,...,x_n$, (n+1) pontos distintos de um intervalo $[a,b]$ e $y_i=f(x_i)$, $i=0,1,...,n$. O polinômio interpolador de Lagrange é dado por 
+    $$ P(x) = y_0 l_0(x) + y_1 l_1(x) + ...+y_n l_n(x)$$
+   
+$l_k(x)$, $k=0,1,...,n$ são polinômios de grau $n$ obtidos pela fórmula
+
+$$ l_k(x)=\\frac{(x-x_0)(x-x_1)...(x-x_{k-1})(x-x_{k+1})...(x-x_n)}{(x_k-x_0)(x_k-x_1)...(x_k-x_{k-1})(x_k-x_{k+1})...(x_k-x_n)}$$
+
+ou, de forma compacta
+
+$$P(x)=\\sum_{k=0}^{n} y_k l_k(x) $$
+ 
+com
+
+$$ l_k(x) = \\prod_{j=0 e j\\neq k}^{n} \\frac{(x-x_j)}{(x_k-x_j)}$$
+
+onde o simbolo acima significa o produto. 
 
 # O método de diferenças finitas: EDPs elípticas
 O método de diferenças finitas é uma abordagem numérica que aproxima as derivadas de uma equação diferencial parcial através de diferenças entre os valores discretos das variáveis ao longo de uma malha espacial, transformando a equação contínua em um sistema de equações algébricas solucionáveis.
