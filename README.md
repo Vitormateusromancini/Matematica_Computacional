@@ -28,7 +28,7 @@ Plotar os gráficos usa-se plt.plot() que traça o gráfico da função, especif
 
 ![Figure python](https://github.com/Vitormateusromancini/Matematica_Computacional/assets/77472862/f612efd4-9df0-4abd-9ba0-fefa9397b5f1)
 
-#Interpolação Polinomial 
+# Interpolação Polinomial
 
 Uma função interpolada é aquela que passa em todos os n pontos dustintos de um intervalo [a,b], portanto uma função f(x) tal que ela seja igual a: 
 
@@ -53,7 +53,25 @@ com
 
 $$ l_k(x) = \\prod_{j=0 e j\\neq k}^{n} \\frac{(x-x_j)}{(x_k-x_j)}$$
 
-onde o simbolo acima significa o produto. 
+onde o simbolo acima significa o produto. Um exemplo utilizando python está abaixo: 
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np 
+x = [0.0, 0.5, 1.0]
+y = [1.3, 2.5, 0.9]
+
+def P(x): return  -5.6*x**2 + 5.2*x + 1.3
+
+xnew = np.linspace(-1, 2, num=51)
+print (xnew)
+plt.plot(x, y, '.', xnew, P(xnew),'-', )
+plt.grid()
+plt.show()
+
+print ('P(0.5)=', P(0.5))
+
+```
 
 # O método de diferenças finitas: EDPs elípticas
 O método de diferenças finitas é uma abordagem numérica que aproxima as derivadas de uma equação diferencial parcial através de diferenças entre os valores discretos das variáveis ao longo de uma malha espacial, transformando a equação contínua em um sistema de equações algébricas solucionáveis.
