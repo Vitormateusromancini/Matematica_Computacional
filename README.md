@@ -73,6 +73,27 @@ print ('P(0.5)=', P(0.5))
 
 ```
 
+# Erros absolutos e relativos
+
+Erro absoluto: É a diferença entre o valor medido (ou aproximado) e o valor real de uma grandeza. Ele indica a magnitude do erro em unidades da própria grandeza.
+Erro relativo: É a razão entre o erro absoluto e o valor real, expressa em porcentagem. Ele indica a significância do erro em relação ao valor real.
+
+Um exemplo considerando uma sequência:
+
+```Python
+import math
+x = 1
+x_ant = x
+x_exa = (1+math.sqrt(5))/2
+    
+for k in range(20):
+        x = 1+1/x
+        dif = abs(x-x_ant)/abs(x)
+        err = abs(x-x_exa)/abs(x_exa)
+        print (x, x_exa, err, dif)
+        x_ant = x
+```
+
 # O método de diferenças finitas: EDPs elípticas
 O método de diferenças finitas é uma abordagem numérica que aproxima as derivadas de uma equação diferencial parcial através de diferenças entre os valores discretos das variáveis ao longo de uma malha espacial, transformando a equação contínua em um sistema de equações algébricas solucionáveis.
 
